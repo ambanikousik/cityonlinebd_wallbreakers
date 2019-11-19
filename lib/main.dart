@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
 import 'contact.dart';
-import 'media.dart';
-import 'web.dart';
 import 'videoplayer.dart';
 import 'livetv.dart';
+import 'newspaper.dart';
 import 'widget.dart';
+import 'medialist.dart';
+import 'loading.dart';
+import 'data.dart';
+import 'sports_update.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'routersetup.dart';
 
 void main() { runApp(MaterialApp(
     theme: ThemeData(
@@ -16,12 +21,21 @@ void main() { runApp(MaterialApp(
     //home: IspApp(),
     initialRoute: '/',
     routes: {
-      '/': (_) => IspApp(),
+    //  '/': (_) => IspApp(),
+      '/': (_) => Loader(),
+      '/home': (_) => IspApp(),
       '/contact': (_) => Contacts(),
-      '/media': (_) => media(),
+      '/media': (_) => MediaList(),
+      '/routersetup': (_) => RouterSetup(),
       '/liveTv': (_) => LiveTv(),
-      '/bill': (_) => CarouselDemo(),
       '/video': (_) => ServerVideo(),
       '/browser': (_) => ServerBrowser(),
+      '/news': (_) => NewsListView(),
+      '/sport' : (_) => Sports(),
+      '/browserX': (_) => WebviewScaffold(
+        url: selectedUrlx,
+        appBar: AppBar( title: Text("City Online Ltd."),),
+        withZoom: true,
+      ),
     }
 ));}

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
-import 'dart:async';
 import 'dart:math';
-//import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'widget.dart';
 
 var PlayingVideo = false;

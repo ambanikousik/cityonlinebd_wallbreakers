@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'webviewscaffold.dart';
+import 'data.dart';
 //import 'package:flutter_webview_plugin/src/base.dart';
 
- String selectedUrlx ;
+
 class ServerBrowser extends StatefulWidget{
   @override
   _serverBrowser createState() => _serverBrowser();

@@ -12,9 +12,6 @@ class LiveTv extends StatefulWidget {
 
 class _livetv extends State<LiveTv> {
 
-
-
-
   initState() {
     super.initState();
   }
@@ -28,7 +25,7 @@ class _livetv extends State<LiveTv> {
 Widget build(BuildContext context) {
 // TODO: implement build
   return Scaffold(
-    backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+    backgroundColor: Color.fromRGBO(240,240,240,1.0),
     appBar: AppBar(
       elevation: 0.1,
       backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),

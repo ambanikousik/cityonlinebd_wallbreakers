@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 
 
-class Contacts extends StatelessWidget{
+class RouterSetup extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class Contacts extends StatelessWidget{
         alignment: Alignment.center,
         color: Color.fromRGBO(240,240,240,1.0),
         child: Container(
-         // width: 500,
+          // width: 500,
           alignment: Alignment.center,
           height: MediaQuery.of(context).size.height *2.5/3,
           width: MediaQuery.of(context).size.width *2.5/3,
@@ -21,10 +21,10 @@ class Contacts extends StatelessWidget{
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(20)),
             color:Colors.white,
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black54)
-              ]
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black54)
+            ]
             ,
           ),
           child: Column(
@@ -34,14 +34,14 @@ class Contacts extends StatelessWidget{
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  'CITY ONLINE Ltd.',
-                  style: TextStyle(fontSize: 35.0, color: Colors.blueGrey),
+                  'SETUP ROUTER',
+                  style: TextStyle(fontSize: 30.0, color: Colors.deepOrange),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  'Sector: 7 \nRoad - 18 \nHouse- 43 (1st floor) \nUttara,Dhaka, Bangladesh 1230',
+                  'Press Either "Button-1" or "Button-2" to configure your router',
                   style: TextStyle(fontSize: 20.0, color: Colors.black54),
                 ),
               ),
@@ -53,18 +53,18 @@ class Contacts extends StatelessWidget{
                   children: <Widget>[
                     RaisedButton(
                       onPressed: () {
-                        launch("http://m.me/cityonlineisp");
+                        launch("http://192.168.0.1");
                       },
                       color: Colors.blueGrey,
-                      child: Text('Chat'),
+                      child: Text('Button 1'),
                       textColor: Colors.white,
                     ),
                     RaisedButton(
                       onPressed: () {
-                        launch("tel:09611699533");
+                        launch("http://192.168.1.1");
                       },
                       color: Colors.blueGrey,
-                      child: Text('Call'),
+                      child: Text('Button 2'),
                       textColor: Colors.white,
                     ),
                   ],
@@ -75,4 +75,4 @@ class Contacts extends StatelessWidget{
       ),
     );
   }
-  }
+}

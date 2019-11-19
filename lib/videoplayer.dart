@@ -1,12 +1,11 @@
 import 'package:chewie/chewie.dart';
-import 'package:chewie/src/chewie_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'data.dart';
 import 'package:auto_orientation/auto_orientation.dart';
 import 'package:flutter/services.dart';
-
+import 'package:screen/screen.dart';
 
 class ServerVideo extends StatefulWidget {
   ServerVideo({this.title = 'Video'});
@@ -25,11 +24,13 @@ class _ServerVideoState extends State<ServerVideo> {
   @override
   void initState() {
     super.initState();
+    Screen.keepOn(true);
     _chewieController = ChewieController(
       videoPlayerController: _videoPlayerController,
       aspectRatio: 3 / 2,
       autoPlay: true,
       looping: true,
+      allowedScreenSleep: false,
 
       // Try playing around with some of these other options:
 

@@ -92,26 +92,6 @@ class _WebviewScaffoldxStatex extends State<WebviewScaffoldx> {
       }
     });
 
- /*   _onUrlChanged = webviewReference.onUrlChanged.listen((String url) {
-      if (mounted) {
-        setState(() {
-          print('onUrlChanged: $url');
-
-         // String urlx = state.url;
-          if(url.contains(".mp4") || url.contains(".avi") || url.contains(".mkv")){
-            if(!PlayingVideo) {
-              VideoUrl = url;
-              PlayingVideo = true;
-              webviewReference.close();
-              Navigator.pushNamed(context, '/');
-              Navigator.pushNamed(context, '/video');
-            }
-          }
-        });
-      }
-    });
-*/
-
       _onStateChanged = webviewReference.onStateChanged.listen((WebViewStateChanged state) {
         if (widget.hidden) {
         if (state.type == WebViewState.finishLoad) {
@@ -126,7 +106,7 @@ class _WebviewScaffoldxStatex extends State<WebviewScaffoldx> {
                 VideoUrl = urlx;
                 PlayingVideo = true;
                 webviewReference.close();
-                Navigator.pushNamed(context, '/');
+               // Navigator.pushNamed(context, '/');
                 Navigator.pushNamed(context, '/video');
               }
             }
@@ -154,7 +134,7 @@ class _WebviewScaffoldxStatex extends State<WebviewScaffoldx> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: widget.appBar,
+      //appBar: widget.appBar,
       resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
       persistentFooterButtons: widget.persistentFooterButtons,
       bottomNavigationBar: widget.bottomNavigationBar,
